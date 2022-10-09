@@ -18,6 +18,8 @@ struct ContentView: View {
   @State private var currentTime: Date = .now
   @State private var startTime: Date = .now
   
+  @State private var moves: [Move] = Move.allCases
+  
   private let maxLevels = 20
   private let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
   
@@ -62,7 +64,7 @@ struct ContentView: View {
       Divider()
         .padding(.vertical)
       
-      MoveButtonsView(onMoveSelected: selectMove)
+      MoveButtonsView(moves: moves, onMoveSelected: selectMove)
         .padding(.horizontal)
       
       LevelAndScoreTextView(level: level, maxLevel: maxLevels, time: time)
@@ -93,6 +95,7 @@ extension ContentView {
     shouldWin = Bool.random()
     title = shouldWin ? "Win!" : "Lose!"
     questionMove = Move.uniqueRandom(not: questionMove)
+    moves.shuffle()
   }
   
   private func restartGame() {

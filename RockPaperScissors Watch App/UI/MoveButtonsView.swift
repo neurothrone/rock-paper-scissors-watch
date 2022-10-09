@@ -22,13 +22,14 @@ struct MoveButtonsView: View {
     }
   }
   
+  let moves: [Move]
   let onMoveSelected: (Move) -> Void
   
   var body: some View {
     HStack {
-      ForEach(Move.allCases) { move in
+      ForEach(Array(zip(moves.indices, moves)), id: \.1) { index, move in
         Group {
-          if move == .paper {
+          if index == .one {
             MoveButtonView(move: move, onMoveSelected: onMoveSelected)
               .horizontalSpacing()
           } else {
@@ -43,6 +44,6 @@ struct MoveButtonsView: View {
 
 struct MoveButtonsView_Previews: PreviewProvider {
   static var previews: some View {
-    MoveButtonsView(onMoveSelected: { _ in })
+    MoveButtonsView(moves: Move.allCases, onMoveSelected: { _ in })
   }
 }
