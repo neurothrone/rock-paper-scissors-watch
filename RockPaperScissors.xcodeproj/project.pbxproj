@@ -18,6 +18,8 @@
 		2FB4FFA828F305B400B9ECFA /* LevelAndScoreTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4FFA728F305B400B9ECFA /* LevelAndScoreTextView.swift */; };
 		2FB4FFAB28F3063C00B9ECFA /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4FFAA28F3063C00B9ECFA /* Move.swift */; };
 		2FB4FFAD28F3066100B9ECFA /* EndOfGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4FFAC28F3066100B9ECFA /* EndOfGameView.swift */; };
+		2FB4FFB228F30A5000B9ECFA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2FB4FFB028F30A5000B9ECFA /* LICENSE */; };
+		2FB4FFB328F30A5000B9ECFA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2FB4FFB128F30A5000B9ECFA /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		2FB4FFA728F305B400B9ECFA /* LevelAndScoreTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelAndScoreTextView.swift; sourceTree = "<group>"; };
 		2FB4FFAA28F3063C00B9ECFA /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		2FB4FFAC28F3066100B9ECFA /* EndOfGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfGameView.swift; sourceTree = "<group>"; };
+		2FB4FFB028F30A5000B9ECFA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2FB4FFB128F30A5000B9ECFA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 		2FB4FF8D28F1DEEC00B9ECFA /* RockPaperScissors Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				2FB4FFB028F30A5000B9ECFA /* LICENSE */,
+				2FB4FFB128F30A5000B9ECFA /* README.md */,
 				2FB4FFA128F3045700B9ECFA /* App */,
 				2FB4FF9C28F2B75D00B9ECFA /* Extensions */,
 				2FB4FFA928F3063400B9ECFA /* Model */,
@@ -178,7 +184,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FB4FFB228F30A5000B9ECFA /* LICENSE in Resources */,
 				2FB4FF9628F1DEED00B9ECFA /* Preview Assets.xcassets in Resources */,
+				2FB4FFB328F30A5000B9ECFA /* README.md in Resources */,
 				2FB4FF9328F1DEED00B9ECFA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
