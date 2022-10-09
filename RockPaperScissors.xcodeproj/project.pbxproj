@@ -13,6 +13,11 @@
 		2FB4FF9628F1DEED00B9ECFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB4FF9528F1DEED00B9ECFA /* Preview Assets.xcassets */; };
 		2FB4FF9E28F2B76700B9ECFA /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4FF9D28F2B76700B9ECFA /* Int+Extensions.swift */; };
 		2FB4FFA028F2F63900B9ECFA /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4FF9F28F2F63900B9ECFA /* View+Extensions.swift */; };
+		2FB4FFA428F3046E00B9ECFA /* MoveImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4FFA328F3046E00B9ECFA /* MoveImageView.swift */; };
+		2FB4FFA628F304D300B9ECFA /* MoveButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4FFA528F304D300B9ECFA /* MoveButtonsView.swift */; };
+		2FB4FFA828F305B400B9ECFA /* LevelAndScoreTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4FFA728F305B400B9ECFA /* LevelAndScoreTextView.swift */; };
+		2FB4FFAB28F3063C00B9ECFA /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4FFAA28F3063C00B9ECFA /* Move.swift */; };
+		2FB4FFAD28F3066100B9ECFA /* EndOfGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB4FFAC28F3066100B9ECFA /* EndOfGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		2FB4FF9528F1DEED00B9ECFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2FB4FF9D28F2B76700B9ECFA /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
 		2FB4FF9F28F2F63900B9ECFA /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		2FB4FFA328F3046E00B9ECFA /* MoveImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveImageView.swift; sourceTree = "<group>"; };
+		2FB4FFA528F304D300B9ECFA /* MoveButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveButtonsView.swift; sourceTree = "<group>"; };
+		2FB4FFA728F305B400B9ECFA /* LevelAndScoreTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelAndScoreTextView.swift; sourceTree = "<group>"; };
+		2FB4FFAA28F3063C00B9ECFA /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		2FB4FFAC28F3066100B9ECFA /* EndOfGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +65,10 @@
 		2FB4FF8D28F1DEEC00B9ECFA /* RockPaperScissors Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				2FB4FFA128F3045700B9ECFA /* App */,
 				2FB4FF9C28F2B75D00B9ECFA /* Extensions */,
-				2FB4FF8E28F1DEEC00B9ECFA /* RockPaperScissorsApp.swift */,
-				2FB4FF9028F1DEEC00B9ECFA /* ContentView.swift */,
-				2FB4FF9228F1DEED00B9ECFA /* Assets.xcassets */,
+				2FB4FFA928F3063400B9ECFA /* Model */,
+				2FB4FFA228F3046100B9ECFA /* UI */,
 				2FB4FF9428F1DEED00B9ECFA /* Preview Content */,
 			);
 			path = "RockPaperScissors Watch App";
@@ -79,6 +89,35 @@
 				2FB4FF9F28F2F63900B9ECFA /* View+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2FB4FFA128F3045700B9ECFA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2FB4FF8E28F1DEEC00B9ECFA /* RockPaperScissorsApp.swift */,
+				2FB4FF9228F1DEED00B9ECFA /* Assets.xcassets */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2FB4FFA228F3046100B9ECFA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2FB4FF9028F1DEEC00B9ECFA /* ContentView.swift */,
+				2FB4FFA328F3046E00B9ECFA /* MoveImageView.swift */,
+				2FB4FFA528F304D300B9ECFA /* MoveButtonsView.swift */,
+				2FB4FFA728F305B400B9ECFA /* LevelAndScoreTextView.swift */,
+				2FB4FFAC28F3066100B9ECFA /* EndOfGameView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2FB4FFA928F3063400B9ECFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2FB4FFAA28F3063C00B9ECFA /* Move.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +193,11 @@
 				2FB4FF9E28F2B76700B9ECFA /* Int+Extensions.swift in Sources */,
 				2FB4FF9128F1DEEC00B9ECFA /* ContentView.swift in Sources */,
 				2FB4FFA028F2F63900B9ECFA /* View+Extensions.swift in Sources */,
+				2FB4FFA628F304D300B9ECFA /* MoveButtonsView.swift in Sources */,
+				2FB4FFAB28F3063C00B9ECFA /* Move.swift in Sources */,
+				2FB4FFA828F305B400B9ECFA /* LevelAndScoreTextView.swift in Sources */,
+				2FB4FFA428F3046E00B9ECFA /* MoveImageView.swift in Sources */,
+				2FB4FFAD28F3066100B9ECFA /* EndOfGameView.swift in Sources */,
 				2FB4FF8F28F1DEEC00B9ECFA /* RockPaperScissorsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
