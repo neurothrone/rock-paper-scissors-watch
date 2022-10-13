@@ -11,10 +11,13 @@ struct LevelAndScoreTextView: View {
   let level: Int
   let maxLevel: Int
   let time: String
+  let levelColor: Color
   
   var body: some View {
     HStack {
-      Text("Level: \(level)/\(maxLevel)")
+      Text("Level:")
+        .foregroundColor(levelColor)
+      Text("\(level)/\(maxLevel)")
       Spacer()
       Text("Time: \(time)")
     }
@@ -23,6 +26,6 @@ struct LevelAndScoreTextView: View {
 
 struct LevelAndScoreTextView_Previews: PreviewProvider {
   static var previews: some View {
-    LevelAndScoreTextView(level: 7, maxLevel: 20, time: "59")
+    LevelAndScoreTextView(level: 7, maxLevel: 20, time: "59", levelColor: .primary)
   }
 }

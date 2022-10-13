@@ -20,6 +20,8 @@ struct ContentView: View {
   
   @State private var moves: [Move] = Move.allCases
   
+  @State private var levelColor: Color = .primary
+  
   private let maxLevels = 20
   private let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
   
@@ -67,7 +69,7 @@ struct ContentView: View {
       MoveButtonsView(moves: moves, onMoveSelected: selectMove)
         .padding(.horizontal)
       
-      LevelAndScoreTextView(level: level, maxLevel: maxLevels, time: time)
+      LevelAndScoreTextView(level: level, maxLevel: maxLevels, time: time, levelColor: levelColor)
         .padding([.top, .horizontal])
     }
   }
@@ -82,6 +84,13 @@ extension ContentView {
     let wasCorrect = move == (shouldWin ? answer.win : answer.lose)
     level += wasCorrect ? .one : -.one
     level.clamp(min: .one, max: maxLevels)
+    
+    levelColor = wasCorrect ? .green : .red
+    
+    Task {
+      try await Task.sleep(until: .now + .milliseconds(500), clock: .continuous)
+      levelColor = .primary
+    }
     
     newLevel()
   }
