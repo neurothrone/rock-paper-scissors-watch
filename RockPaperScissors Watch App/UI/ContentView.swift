@@ -68,6 +68,7 @@ struct ContentView: View {
       
       MoveButtonsView(moves: moves, onMoveSelected: selectMove)
         .padding(.horizontal)
+        .disabled(levelColor != .primary)
       
       LevelAndScoreTextView(level: level, maxLevel: maxLevels, time: time, levelColor: levelColor)
         .padding([.top, .horizontal])
@@ -85,7 +86,9 @@ extension ContentView {
     level += wasCorrect ? .one : -.one
     level.clamp(min: .one, max: maxLevels)
     
-    levelColor = wasCorrect ? .green : .red
+    withAnimation(.easeInOut) {
+      levelColor = wasCorrect ? .green : .red      
+    }
     
     Task {
       try await Task.sleep(until: .now + .milliseconds(500), clock: .continuous)
